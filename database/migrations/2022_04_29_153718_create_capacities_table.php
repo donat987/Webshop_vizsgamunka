@@ -13,17 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('capacities', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('surname');
-            $table->string('email');
-            $table->string('username');
-            $table->string('picturename');
-            $table->boolean('admin');
-            $table->date('birthdate');
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('capacity');
             $table->timestamps();
         });
     }
@@ -35,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('capacities');
     }
 };
