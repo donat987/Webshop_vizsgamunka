@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class brand extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        "name",
+        "picture",
+    ];
+
+    public function products()
+    {
+        return $this->belongsToMany(products::class);
+    }
 }

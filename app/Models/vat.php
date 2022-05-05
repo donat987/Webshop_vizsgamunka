@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class vat extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        "vat",
+    ];
+
+    public function products()
+    {
+        return $this->belongsToMany(products::class);
+    }
 }

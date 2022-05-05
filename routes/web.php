@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/bejelentkezes', function () {
+    return view('login');
+});
+
+Route::get('/regisztracio', function () {
+    return view('register');
+});
+
+// Route::controller(Product::class)->group(function(){
+//     Route::get('/termekek/{product}', 'show');
+// });
+Route::get('/termekek/{product}',[App\Http\Controllers\ProductController::class, 'show']);
+
