@@ -40,6 +40,10 @@ class ProductController extends Controller
         return view('product.show', compact('termek'));
     }
 
+    public function action(){
+        return view('product.akcion');
+    }
+
     // /**
     //  * Show the form for editing the specified resource.
     //  *

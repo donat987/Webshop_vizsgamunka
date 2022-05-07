@@ -29,5 +29,7 @@ Route::get('/regisztracio', function () {
 // Route::controller(Product::class)->group(function(){
 //     Route::get('/termekek/{product}', 'show');
 // });
+Route::get('/termekek/akcio',[App\Http\Controllers\ProductController::class, 'action']);
 Route::get('/termekek/{product}',[App\Http\Controllers\ProductController::class, 'show']);
+
 
