@@ -36,11 +36,11 @@
                         <div class='col-lg-4 mb-5 col-md-6'>
                             <form method='post' action='cart.php?action=add&id=&quantity=1'>
                                 <div class='wine_v_1 text-center pb-4'>
-                                    <a href='' class='thumbnail d-block mb-4'><img
+                                    <a href='/termekek/{{ $r->id }}' class='thumbnail d-block mb-4'><img
                                             src="images/termekkepek/{{ $r->picturename }}" alt='Image'
                                             class='img-fluid'></a>
                                     <div>
-                                        <h3 class='heading mb-1'><a href=''>{{ $r->name }}</a></h3>
+                                        <h3 class='heading mb-1'><a href='/termekek/{{ $r->id }}'>{{ $r->name }}</a></h3>
                                         @if ($r->actionprice == 0)
                                             <span class='price'>{{ $r->price }} Ft</span>
                                         @else
